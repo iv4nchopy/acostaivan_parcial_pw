@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="topnav">
-    <div class="logo">Lewandowski Fan</div>
+    <div class="logo">LEWANDOWSKI</div>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="perfil.html">Perfil</a>
@@ -18,33 +18,30 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container symmetric">
     <h1 class="rotating-text">Robert Lewandowski</h1>
-    <p class="lead">Sitio dedicado al delantero polaco: biografía, galería, y trayectoria profesional.</p>
+    <p class="lead">Sitio dedicado al delantero polaco — biografía, galería y trayectoria profesional.</p>
 
-    <section class="btn-grid">
-      <!-- 5 botones animados (cada uno con animación distinta) -->
+    <section class="btn-grid symmetric-grid">
       <button class="btn pulse" onclick="location.href='perfil.html'">Perfil Profesional</button>
       <button class="btn wobble" onclick="location.href='galeria.html'">Galería</button>
       <button class="btn floaty" onclick="location.href='blog.html'">Blog Profesional</button>
       <button class="btn colorCycleBtn" id="clickChangeBtn">Botón Cambiante (clic)</button>
-      <button class="btn spinOnHover" onclick="window.open('https://www.fcbarcelona.com/en/football/first-team/players/5109/robert-lewandowski','_blank')">Web Oficial (Club)</button>
+      <button class="btn spinOnHover" onclick="window.open('https://www.fcbarcelona.com/en/football/first-team/players/5109/robert-lewandowski','_blank')">Web Oficial</button>
     </section>
 
-    <section class="descripcion">
-      <h2>¿Qué encontrarás en las otras páginas?</h2>
+    <section class="descripcion symmetric-box">
+      <h2>Contenido de las páginas</h2>
       <ul>
-        <li><strong>Perfil:</strong> Biografía, tabla de carrera y enlaces de contacto (PDF del CV).</li>
-        <li><strong>Galería:</strong> 8 imágenes con animaciones individuales y descripciones al pasar el mouse.</li>
-        <li><strong>Blog:</strong> 3 entradas sobre pasos claves de su carrera con animación de entrada y "Leer más".</li>
+        <li><strong>Perfil:</strong> Biografía, tabla de carrera y enlace al CV en PDF.</li>
+        <li><strong>Galería:</strong> 8 imágenes (hover muestra título y descripción).</li>
+        <li><strong>Blog:</strong> 3 entradas sobre pasos clave con "Leer más".</li>
       </ul>
     </section>
 
-    <!-- caja con ciclo de colores -->
-    <div class="color-cycle-box" title="Caja con ciclo de colores"></div>
+    <div class="color-cycle-box" aria-hidden="true"></div>
 
-    <!-- texto con velocidad animada variable -->
-    <p class="speed-text">Texto con velocidad variable (con clase cambiará la velocidad).</p>
+    <p class="speed-text">Texto con velocidad variable</p>
   </main>
 
   <footer class="footer">
@@ -54,4 +51,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
