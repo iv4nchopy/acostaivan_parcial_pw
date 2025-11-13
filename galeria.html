@@ -1,59 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería Profesional</title>
-  <link rel="stylesheet" href="estilo.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Galería - Robert Lewandowski</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="perfil.html">Perfil Profesional</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="blog.html">Blog Profesional</a></li>
-      </ul>
+  <header class="topnav">
+    <div class="logo">Lewandowski Fan</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="galeria.html">Galería</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://commons.wikimedia.org/wiki/Category:Robert_Lewandowski" target="_blank">Imágenes</a>
     </nav>
   </header>
 
-  <main class="galeria">
-    <h2>Galería de Proyectos</h2>
-    <div class="imagenes">
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/3184454/pexels-photo-3184454.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Trabajo en equipo">
-        <div class="overlay">Proyecto 1 - Trabajo en equipo</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Diseño UX/UI">
-        <div class="overlay">Proyecto 2 - Diseño UX/UI</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Desarrollo Web">
-        <div class="overlay">Proyecto 3 - Desarrollo Web</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Inteligencia Artificial">
-        <div class="overlay">Proyecto 4 - Inteligencia Artificial</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Programación">
-        <div class="overlay">Proyecto 5 - Programación</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Análisis de Datos">
-        <div class="overlay">Proyecto 6 - Análisis de Datos</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Innovación">
-        <div class="overlay">Proyecto 7 - Innovación</div>
-      </div>
-      <div class="img-item">
-        <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Diseño gráfico">
-        <div class="overlay">Proyecto 8 - Diseño Gráfico</div>
-      </div>
+  <main class="container">
+    <h1>Galería</h1>
+    <p class="lead">Pasa el ratón sobre cada imagen para ver título y descripción (hover).</p>
+
+    <div class="gallery">
+      <!-- Ocho tarjetas: cada img con animación distinta y descripción que aparece on hover -->
+      <figure class="card anim-zoom">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Robert_Lewandowski_2018.jpg" alt="">
+        <figcaption>
+          <h4>Lewandowski - Retrato</h4>
+          <p>Retrato oficial en competición internacional.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-rotate">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Robert_Lewandowski_2018_FIFA.jpg" alt="">
+        <figcaption>
+          <h4>En acción</h4>
+          <p>Remate durante el Mundial.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Robert_Lewandowski_Bayern.jpg" alt="">
+        <figcaption>
+          <h4>Con Bayern</h4>
+          <p>Celebrando un gol con Bayern Munich.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-skew">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Robert_Lewandowski_Barcelona.jpg" alt="">
+        <figcaption>
+          <h4>Con Barça</h4>
+          <p>Presentación con el Barcelona.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-blur">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Robert_Lewandowski_match.jpg" alt="">
+        <figcaption>
+          <h4>En partido</h4>
+          <p>Jugando con la selección de Polonia.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-flip">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Robert_in_training.jpg" alt="">
+        <figcaption>
+          <h4>Entrenamiento</h4>
+          <p>Sesión en el campo de entrenamiento.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-pulse-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Robert_celebration.jpg" alt="">
+        <figcaption>
+          <h4>Celebración</h4>
+          <p>Celebrando un gol importante.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="card anim-zoom-out">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Robert_press.jpg" alt="">
+        <figcaption>
+          <h4>Medios</h4>
+          <p>Rueda de prensa y entrevistas.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="botones">
+      <button class="btn" onclick="location.href='index.html'">Volver</button>
+      <button class="btn" onclick="location.href='perfil.html'">Perfil</button>
     </div>
   </main>
+
+  <footer class="footer">
+    <p>© APELLIDO NOMBRE — 13 de noviembre de 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
