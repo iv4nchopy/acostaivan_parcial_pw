@@ -1,154 +1,183 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f8f9fa;
+/* -------- GENERAL -------- */
+:root {
+  --gris-claro: #e6e6e6;
+  --gris-medio: #b3b3b3;
+  --gris-oscuro: #444;
+  --blanco: #f9f9f9;
 }
 
-header {
-  background: #333;
-  padding: 10px;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--gris-claro);
+  color: var(--gris-oscuro);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--gris-oscuro);
+  color: var(--blanco);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* -------- MENÚ -------- */
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
 .menu li a {
-  color: white;
+  color: var(--blanco);
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  display: block;
+  transition: background 0.3s;
 }
 
 .menu li a:hover {
-  background: #555;
+  background: var(--gris-medio);
   border-radius: 5px;
 }
 
-/* Botones animados */
-.boton {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px 25px;
-  color: white;
-  background: #007bff;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+/* -------- CONTENIDO PRINCIPAL -------- */
+main {
+  flex: 1;
+  text-align: center;
+  padding: 40px 20px;
 }
+
+.contenido-principal p {
+  margin-top: 10px;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botones {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.boton {
+  background: var(--gris-oscuro);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
 .boton:hover {
-  background: #0056b3;
+  background: var(--gris-medio);
   transform: scale(1.1);
 }
 
-/* Caja cíclica */
-.caja-ciclica {
-  width: 100px;
-  height: 100px;
-  margin: 30px auto;
-  border-radius: 10px;
-  animation: colores 4s infinite;
-}
-@keyframes colores {
-  0% { background: red; }
-  33% { background: yellow; }
-  66% { background: blue; }
-  100% { background: red; }
-}
-
-/* Texto rotativo */
+/* -------- ANIMACIONES -------- */
 .texto-rotativo {
-  animation: rotar 10s linear infinite;
+  font-size: 1.8em;
+  animation: rotar 20s linear infinite;
 }
 @keyframes rotar {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
 }
 
-/* Iconos de redes */
-.redes .icono {
+/* -------- TABLAS -------- */
+.tabla-container {
+  overflow-x: auto;
+}
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: var(--blanco);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid var(--gris-medio);
+  padding: 12px;
+}
+th {
+  background: var(--gris-medio);
+  color: var(--blanco);
+}
+
+/* -------- ICONOS -------- */
+.redes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.icono {
   width: 40px;
   height: 40px;
   display: inline-block;
-  margin: 5px;
-  border-radius: 50%;
   background-size: cover;
-  transition: 0.5s;
+  border-radius: 50%;
+  transition: transform 0.3s, filter 0.3s;
 }
-.facebook { background: url('https://cdn-icons-png.flaticon.com/512/733/733547.png') no-repeat center/cover; }
-.twitter { background: url('https://cdn-icons-png.flaticon.com/512/733/733579.png') no-repeat center/cover; }
-.linkedin { background: url('https://cdn-icons-png.flaticon.com/512/733/733561.png') no-repeat center/cover; }
-.icono:hover { transform: scale(1.2); filter: hue-rotate(90deg); }
-
-/* Galería */
-.galeria .imagenes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin: 20px;
-}
-.img-item {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.5s;
-}
-.img-item img {
-  width: 100%;
-  display: block;
-  transition: transform 0.5s;
-}
-.img-item:hover img {
+.icono:hover {
   transform: scale(1.2);
-}
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.img-item:hover .overlay { opacity: 1; }
-
-/* Blog animación de entrada */
-.entrada {
-  margin: 20px auto;
-  width: 80%;
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  animation: slideUp 1s ease forwards;
-}
-@keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  filter: brightness(1.2);
 }
 
-/* Botón cambiante */
+.facebook { background: url('https://cdn-icons-png.flaticon.com/512/733/733547.png'); }
+.twitter { background: url('https://cdn-icons-png.flaticon.com/512/733/733579.png'); }
+.linkedin { background: url('https://cdn-icons-png.flaticon.com/512/733/733561.png'); }
+
+/* -------- BOTÓN CV -------- */
 .boton-cv {
-  background: #28a745;
-  color: white;
-  padding: 10px 20px;
+  background: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 10px 25px;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.5s ease;
+  transition: 0.3s;
 }
-.boton-cv:active {
-  background: #218838;
-  transform: scale(1.2);
+.boton-cv:hover {
+  background: var(--gris-medio);
 }
 
-/* Footer */
+/* -------- FOOTER -------- */
 footer {
-  background: #333;
-  color: white;
   text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+  background: var(--gris-oscuro);
+  color: var(--blanco);
+  padding: 10px 0;
+  font-size: 0.9em;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .botones {
+    flex-direction: column;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .texto-rotativo {
+    font-size: 1.3em;
+  }
 }
