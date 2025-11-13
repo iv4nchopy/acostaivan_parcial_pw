@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Principal - Portafolio Profesional</title>
-  <link rel="stylesheet" href="estilo.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Robert Lewandowski - Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="perfil.html">Perfil Profesional</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="blog.html">Blog Profesional</a></li>
-      </ul>
+  <header class="topnav">
+    <div class="logo">Lewandowski Fan</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="galeria.html">Galería</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://es.wikipedia.org/wiki/Robert_Lewandowski" target="_blank" rel="noopener">Wikipedia</a>
     </nav>
   </header>
 
-  <main class="contenido-principal">
-    <h1 class="titulo-principal">Bienvenido a mi Portafolio Profesional</h1>
-    <p>Explora las diferentes secciones de mi trayectoria profesional.</p>
+  <main class="container">
+    <h1 class="rotating-text">Robert Lewandowski</h1>
+    <p class="lead">Sitio dedicado al delantero polaco: biografía, galería, y trayectoria profesional.</p>
 
-    <div class="botones">
-      <a href="perfil.html" class="boton animado">Perfil Profesional</a>
-      <a href="galeria.html" class="boton animado">Galería</a>
-      <a href="blog.html" class="boton animado">Blog</a>
-      <a href="#" class="boton animado">Servicios</a>
-      <a href="#" class="boton animado">Contacto</a>
-    </div>
+    <section class="btn-grid">
+      <!-- 5 botones animados (cada uno con animación distinta) -->
+      <button class="btn pulse" onclick="location.href='perfil.html'">Perfil Profesional</button>
+      <button class="btn wobble" onclick="location.href='galeria.html'">Galería</button>
+      <button class="btn floaty" onclick="location.href='blog.html'">Blog Profesional</button>
+      <button class="btn colorCycleBtn" id="clickChangeBtn">Botón Cambiante (clic)</button>
+      <button class="btn spinOnHover" onclick="window.open('https://www.fcbarcelona.com/en/football/first-team/players/5109/robert-lewandowski','_blank')">Web Oficial (Club)</button>
+    </section>
+
+    <section class="descripcion">
+      <h2>¿Qué encontrarás en las otras páginas?</h2>
+      <ul>
+        <li><strong>Perfil:</strong> Biografía, tabla de carrera y enlaces de contacto (PDF del CV).</li>
+        <li><strong>Galería:</strong> 8 imágenes con animaciones individuales y descripciones al pasar el mouse.</li>
+        <li><strong>Blog:</strong> 3 entradas sobre pasos claves de su carrera con animación de entrada y "Leer más".</li>
+      </ul>
+    </section>
+
+    <!-- caja con ciclo de colores -->
+    <div class="color-cycle-box" title="Caja con ciclo de colores"></div>
+
+    <!-- texto con velocidad animada variable -->
+    <p class="speed-text">Texto con velocidad variable (con clase cambiará la velocidad).</p>
   </main>
 
-  <footer>
-    <p>Creado por: <strong>Tu Nombre</strong> | Fecha: 13 de noviembre de 2025</p>
+  <footer class="footer">
+    <p>© APELLIDO NOMBRE — 13 de noviembre de 2025</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
