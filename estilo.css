@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f9fa;
+}
+
+header {
+  background: #333;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.menu li a:hover {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Botones animados */
+.boton {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px 25px;
+  color: white;
+  background: #007bff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.boton:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Caja cíclica */
+.caja-ciclica {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  border-radius: 10px;
+  animation: colores 4s infinite;
+}
+@keyframes colores {
+  0% { background: red; }
+  33% { background: yellow; }
+  66% { background: blue; }
+  100% { background: red; }
+}
+
+/* Texto rotativo */
+.texto-rotativo {
+  animation: rotar 10s linear infinite;
+}
+@keyframes rotar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Iconos de redes */
+.redes .icono {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 50%;
+  background-size: cover;
+  transition: 0.5s;
+}
+.facebook { background: url('https://cdn-icons-png.flaticon.com/512/733/733547.png') no-repeat center/cover; }
+.twitter { background: url('https://cdn-icons-png.flaticon.com/512/733/733579.png') no-repeat center/cover; }
+.linkedin { background: url('https://cdn-icons-png.flaticon.com/512/733/733561.png') no-repeat center/cover; }
+.icono:hover { transform: scale(1.2); filter: hue-rotate(90deg); }
+
+/* Galería */
+.galeria .imagenes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px;
+}
+.img-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.img-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+}
+.img-item:hover img {
+  transform: scale(1.2);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.img-item:hover .overlay { opacity: 1; }
+
+/* Blog animación de entrada */
+.entrada {
+  margin: 20px auto;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: slideUp 1s ease forwards;
+}
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Botón cambiante */
+.boton-cv {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+}
+.boton-cv:active {
+  background: #218838;
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
