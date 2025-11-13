@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog Profesional</title>
-  <link rel="stylesheet" href="estilo.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Blog - Robert Lewandowski</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
+  <header class="topnav">
+    <div class="logo">Lewandowski Fan</div>
     <nav>
-      <ul class="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="perfil.html">Perfil Profesional</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="blog.html">Blog Profesional</a></li>
-      </ul>
+      <a href="index.html">Inicio</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="galeria.html">Galería</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://www.transfermarkt.com/robert-lewandowski/profil/spieler/38253" target="_blank">Transfermarkt</a>
     </nav>
   </header>
 
-  <section class="blog">
-    <h2>Mi Trayectoria</h2>
-    <article class="entrada">
-      <img src="img/img1.jpg" alt="">
-      <h3>Competencia Nacional</h3>
-      <p>Participé en la competencia nacional de programación...</p>
-      <a href="https://www.example.com" class="leer-mas">Leer más</a>
+  <main class="container">
+    <h1>Blog Profesional</h1>
+
+    <article class="post reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Robert_Lewe_dortmund.jpg" alt="">
+      <h2>De Lech Poznań a Borussia Dortmund</h2>
+      <p>Sus primeros pasos en el fútbol profesional, el salto a la Bundesliga y el crecimiento como goleador...</p>
+      <a class="leer-mas" href="https://en.wikipedia.org/wiki/Robert_Lewandowski" target="_blank">Leer más</a>
     </article>
 
-    <article class="entrada">
-      <img src="img/img2.jpg" alt="">
-      <h3>Club de Innovación</h3>
-      <p>Colaboré en proyectos de investigación y desarrollo...</p>
-      <a href="https://www.example.com" class="leer-mas">Leer más</a>
+    <article class="post reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Robert_Bayern.jpg" alt="">
+      <h2>La era Bayern: Consagración europea</h2>
+      <p>Temporadas de muchos goles, títulos de liga y la Champions League que consolidaron su legado...</p>
+      <a class="leer-mas" href="https://en.wikipedia.org/wiki/Robert_Lewandowski#Bayern_Munich" target="_blank">Leer más</a>
     </article>
 
-    <article class="entrada">
-      <img src="img/img3.jpg" alt="">
-      <h3>Proyecto Internacional</h3>
-      <p>Trabajo en conjunto con equipos globales...</p>
-      <a href="https://www.example.com" class="leer-mas">Leer más</a>
+    <article class="post reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Robert_Lewandowski_Barcelona.jpg" alt="">
+      <h2>Barcelona y la nueva etapa</h2>
+      <p>Su llegada a España, adaptación y contribuciones en competiciones nacionales e internacionales...</p>
+      <a class="leer-mas" href="https://www.fcbarcelona.com/en/football/first-team/players/5109/robert-lewandowski" target="_blank">Leer más</a>
     </article>
-  </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© APELLIDO NOMBRE — 13 de noviembre de 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
