@@ -6,6 +6,7 @@
   <title>Perfil - Robert Lewandowski</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
+
 <body>
   <header class="topnav">
     <div class="logo">LEWANDOWSKI</div>
@@ -21,16 +22,22 @@
   <main class="container symmetric">
     <h1>Perfil Profesional</h1>
 
+    <!-- BIOGRAFÍA -->
     <section class="bio symmetric-box">
-      <img src="https://images.pexels.com/photos/21804563/pexels-photo-21804563.jpeg" alt="Robert Lewandowski" class="perfil-img">
+      <img src="https://images.pexels.com/photos/21804563/pexels-photo-21804563.jpeg" 
+           alt="Robert Lewandowski" 
+           class="perfil-img">
+
       <div>
         <h2>Robert Lewandowski</h2>
         <p>
-          Robert Lewandowski (21 de agosto de 1988) es un delantero profesional polaco, reconocido por su capacidad goleadora y rendimiento en clubes europeos.
+          Robert Lewandowski (21 de agosto de 1988) es un delantero profesional polaco, reconocido mundialmente
+          por su capacidad goleadora, su técnica y su liderazgo en los clubes más importantes de Europa.
         </p>
       </div>
     </section>
 
+    <!-- TABLA 3 COLUMNAS × 5 FILAS -->
     <section class="symmetric-box">
       <h3>Trayectoria (3 columnas × 5 filas)</h3>
       <table class="career-table">
@@ -41,31 +48,69 @@
             <th>Logro destacado</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr><td>2006–2008</td><td>Znicz Pruszków</td><td>Máximo goleador (liga)</td></tr>
-          <tr><td>2008–2010</td><td>Lech Poznań</td><td>Ekstraklasa 2009–10</td></tr>
-          <tr><td>2010–2014</td><td>Borussia Dortmund</td><td>Bundesliga y UCL</td></tr>
-          <tr><td>2014–2022</td><td>Bayern Munich</td><td>Múltiples títulos de liga</td></tr>
-          <tr><td>2022–presente</td><td>FC Barcelona</td><td>Títulos en España</td></tr>
+          <tr>
+            <td>2006–2008</td>
+            <td>Znicz Pruszków</td>
+            <td>Máximo goleador (liga)</td>
+          </tr>
+
+          <tr>
+            <td>2008–2010</td>
+            <td>Lech Poznań</td>
+            <td>Campeón Ekstraklasa 2009–10</td>
+          </tr>
+
+          <tr>
+            <td>2010–2014</td>
+            <td>Borussia Dortmund</td>
+            <td>2× Bundesliga - Finalista UCL</td>
+          </tr>
+
+          <tr>
+            <td>2014–2022</td>
+            <td>Bayern Munich</td>
+            <td>Múltiples títulos de liga y Champions League</td>
+          </tr>
+
+          <tr>
+            <td>2022–Presente</td>
+            <td>FC Barcelona</td>
+            <td>Campeón Liga Española</td>
+          </tr>
         </tbody>
       </table>
     </section>
 
+    <!-- REDES + PDF -->
     <section class="contacto symmetric-box">
       <h3>Contacto / Redes</h3>
-      <p>Haz clic en los iconos para visitar sus redes (se abren en nueva pestaña):</p>
+
+      <p>Haz clic en los iconos para visitar sus redes o descargar su CV:</p>
+
       <div class="socials">
-        <a href="https://www.instagram.com/_rl9/" target="_blank" class="icon instagram" title="Instagram" aria-label="Instagram">IG</a>
-        <a href="https://twitter.com/lewy_official" target="_blank" class="icon twitter" title="Twitter" aria-label="Twitter">TW</a>
-        <a href="https://www.facebook.com/robertlewandowski9" target="_blank" class="icon facebook" title="Facebook" aria-label="Facebook">FB</a>
-        <!-- Tu PDF: coloca el archivo en /cv/robert_lewandowski_cv.pdf -->
-        <a href="cv/robert_lewandowski_cv.pdf" target="_blank" class="icon pdf" title="Ver CV (PDF)">PDF</a>
+        <a href="https://www.instagram.com/_rl9/" target="_blank" 
+           class="icon instagram" title="Instagram" aria-label="Instagram">IG</a>
+
+        <a href="https://twitter.com/lewy_official" target="_blank" 
+           class="icon twitter" title="Twitter" aria-label="Twitter">TW</a>
+
+        <a href="https://www.facebook.com/robertlewandowski9" target="_blank" 
+           class="icon facebook" title="Facebook" aria-label="Facebook">FB</a>
+
+        <!-- PDF en la MISMA CARPETA -->
+        <a href="CV_Lewandowski.pdf" 
+           download 
+           class="icon pdf" 
+           title="Descargar CV (PDF)" 
+           aria-label="Curriculum en PDF">PDF</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© APELLIDO NOMBRE — 13 de noviembre de 2025</p>
+    <p>© 2025 — Iván Acosta</p>
   </footer>
 
   <script src="script.js"></script>
